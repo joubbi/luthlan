@@ -9,9 +9,12 @@ Each device will communicate using it's own hardware address.
 ### Usage
 
 To create a device named eth0.1 with the IP address 192.168.0.100/24
+
 `$ ./luthlan.sh eth0 1 192.168.0.100/24`
 
+
 To create a device named eth0.2 with the IP address obtained from DHCP
+
 `$ ./luthlan.sh eth0 2 dhcp`
 
 ___
