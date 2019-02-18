@@ -3,7 +3,7 @@
 A script for adding macvlan interfaces on a linux device.
 
 Each device will communicate using it's own hardware address.
-The hardware address is 58:9c:fc:00:11:x, where x is the same as the device number.
+The hardware address is `58:9c:fc:00:11:x`, where x is the same as the device number supploed to the script.
 
 
 ### Usage
