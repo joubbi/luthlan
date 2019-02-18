@@ -1,5 +1,7 @@
 #!/bin/sh
-############################################################################### #                                                                             # # A script for adding macvlan interfaces on a linux device.                   #
+###############################################################################
+#                                                                             #
+# A script for adding macvlan interfaces on a linux device.                   #
 # Each device will communicate using it's own hardware address.               #
 #                                                                             #
 # Version 1.0 2019-02-18 Initial release.                                     #
