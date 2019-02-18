@@ -2,7 +2,12 @@
 ############################################################################### #                                                                             # # A script for adding macvlan interfaces on a linux device.                   #
 # Each device will communicate using it's own hardware address.               #
 #                                                                             #
-# Version 1.0 2019-02-18 Initial release.                                     # #                                                                             # # Licensed under the Apache License Version 2.0                               # # Written by farid@joubbi.se                                                  # #                                                                             # ############################################################################### 
+# Version 1.0 2019-02-18 Initial release.                                     #
+#                                                                             #
+# Licensed under the Apache License Version 2.0                               #
+# Written by farid@joubbi.se                                                  #
+#                                                                             #
+############################################################################### 
 
 
 
