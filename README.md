@@ -1,4 +1,4 @@
-# luthlan.sh
+# luthlan
 
 A script for adding macvlan interfaces on a linux device.
 
@@ -17,6 +17,7 @@ To create a device named eth0.1 with the IP address 192.168.0.100/24:
 To create a device named eth0.2 with the IP address obtained from DHCP:
 
 `$ ./luthlan.sh eth0 2 dhcp`
+
 
 ___
 
