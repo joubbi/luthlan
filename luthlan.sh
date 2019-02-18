@@ -1,9 +1,15 @@
 #!/bin/sh
+############################################################################### #                                                                             # # A script for adding macvlan interfaces on a linux device.                   #
+# Each device will communicate using it's own hardware address.               #
+#                                                                             #
+# Version 1.0 2019-02-18 Initial release.                                     # #                                                                             # # Licensed under the Apache License Version 2.0                               # # Written by farid@joubbi.se                                                  # #                                                                             # ############################################################################### 
+
+
 
 if [ $# -lt 3 ]; then
   echo "Wrong amount of arguments!"
   echo "./`basename $0` device number address"
-  echo "Example: ./`basename $0` eth0 1 192.168.0.100"
+  echo "Example: ./`basename $0` eth0 1 192.168.0.100/24"
   echo
   exit 1
 fi
