@@ -29,6 +29,7 @@ first="$1"
 amount="$2"
 first_address="$3"
 vlan="$4"
+gateway="$5"
 
 if [ -z "$first" ]; then
   read -rp 'First device number: ' first
@@ -57,6 +58,10 @@ if [ -n "$vlan" ]; then
 fi
 echo "$vlan_device"
 
+if [ -z "$gateway" ]; then
+  read -rp 'Default gateway: ' gateway
+fi
+
 
 three_first_octets=$(echo "$first_address" | grep -oE "\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}\b")
 last_octet=$(echo "$first_address" | grep -oP '[0-9]+(?=/)')
@@ -84,5 +89,11 @@ do
   #  ip addr show dev $device
   number=$((number + 1))
   last_octet=$((last_octet + 1))
+
+  if [ -n "$vlan" ]; then
+    ip route add 0.0.0.0/0 via "$gateway" table "$vlan"
+    ip rule add from "$address" lookup "$vlan"
+  fi
+
 done
 
