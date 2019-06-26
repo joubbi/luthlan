@@ -5,6 +5,8 @@ A script for adding macvlan interfaces on a linux device.
 Each device will communicate using it's own hardware address.
 You can either pass in values as arguments to the scripts, or run it interactively. 
 
+Policy routing is used to add a default gateway for each interface.
+
 ### VLAN support
 The script has support for VLANs.
 You can for example configure a Cisco switchport as a VLAN trunk:
@@ -32,7 +34,7 @@ To create a device named eno1.1 with the IP address obtained from DHCP:
 `# ./luthlan.sh 1 1 dhcp`
 
 
-It's possible to run the script interactively like this:
+It's also possible to run the script interactively like this:
 ```
 # ./luthlan_extreme.sh
 First device number: 1
